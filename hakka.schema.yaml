@@ -4,7 +4,7 @@
 schema:
   schema_id: hakka
   name: Hakka 客語
-  version: "2019.04.17"
+  version: "2026.06.19"
   author:
     - www.syndict.com
   description: |
@@ -49,15 +49,15 @@ speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba
   delimiter: " '"
   algebra:
-    - derive/([123456])//         # 忽略声调
-    - derive/au/ao/         # 模糊音
-    - derive/zh/z/         # 模糊音
-    - derive/ch/c/         # 模糊音
-    - derive/sh/s/         # 模糊音
-    - derive/z/j/         # 模糊音
-    - derive/c/q/         # 模糊音
-    - derive/s/x/         # 模糊音
-    - derive/nj/ng/         # 模糊音
+    - derive/(\d+)//                  # 忽略聲調
+    - derive/au/ao/                   # ao/au 容錯
+    - derive/^([zcs])h/$1/            # 模糊 (zcs)h -> (zcs)
+    - derive/^z/j/                    # 模糊音
+    - derive/^c/q/                    # 模糊音
+    - derive/^s/x/                    # 模糊音
+    - derive/^nj/ng/                  # 模糊音
+    - abbrev/^([a-z]).+$/$1/          # 首字母簡拼
+    - abbrev/^([zcs]h|nj|ng).+$/$1/   # 聲母簡拼
 
 translator:
   dictionary: hakka
