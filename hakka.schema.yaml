@@ -52,9 +52,9 @@ speller:
     - derive/(\d+)//                  # 忽略聲調
     - derive/au/ao/                   # ao/au 容錯
     - derive/^([zcs])h/$1/            # 模糊 (zcs)h -> (zcs)
-    - derive/^z/j/                    # 模糊音
-    - derive/^c/q/                    # 模糊音
-    - derive/^s/x/                    # 模糊音
+    - derive/^z(?=i)/j/               # 模糊音
+    - derive/^c(?=i)/q/               # 模糊音
+    - derive/^s(?=i)/x/               # 模糊音
     - derive/^nj/ng/                  # 模糊音
     - abbrev/^([a-z]).+$/$1/          # 首字母簡拼
     - abbrev/^([zcs]h|nj|ng).+$/$1/   # 聲母簡拼
