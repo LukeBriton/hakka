@@ -9,7 +9,7 @@
 
 ---
 name: hakka
-version: "2026.06.20"
+version: "2026.06.21"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -17,66 +17,46 @@ min_phrase_weight: 100
 ...
 
 # newly added words
-𠊎	ngai2	50%
 𠊎好	ngai ho	50%
 你好冇	ngi ho mo	50%
-歡迎	fon ngiang
 你	ngi	50%
 你曉唔曉得	ngi hiau m hiau det	50%
 曉唔曉	hiau m hiau
 客家話	hak ka fa	50%
-你	nyi
-你好	nyi ho
-爾	nyi
-大家	tai ka
+# 以下山口洋
+你	nji
+你好	nji ho
 好	ho
-譮	boi
+譮	voi
 無	mo
-講譮	gong boi
-客家譮	hak ka boi
-客譮	hak boi
-客家譮	hak ga boi
-仰般	nyong ban
-恁樣	an nyong
-樣	jong
-兜	deu
-你兜	nyi deu
-爾兜	nyi deu
-試著	ci do
+講譮	gong voi
+客家譮	hak ka voi
+客譮	hak voi
+客家譮	hak ga voi
+仰般	njong ban
+恁樣	an njong
+你兜	nji deu
+爾兜	nji deu
+試著	cii do
 今	gin
-今	gim
 今下	gin ha
 今這下	gin lia ha
 今這下	gim lia ha
-用	jung
-佣	jung
-庸	jung
-寫	sia
-字	si
-詞	si
-子	si
-寫字	sia si
+詞	sii
+子	sii
+寫字	sia sii
 這	lia
-這	jia
-有	jiu
-一	jit
-二	nyi
-像	ciong
-像	siong
+這	ia
+二	nji
 像	xiong
 像	qiong
-音	jim
-聲音	sang jim
-隻	cak
-冊	cak
-儕	sa
+聲音	sang im
+隻	zak
 個	e
 個	gai
-意思	ji si
 口	keu
-山口洋	san keu jong
-哎呀	ai ya
-一樣	jit jong
+山口洋	san keu iong
+哎呀	ai ia
 涯想	ngai siong
 想到	siong do
 想著	siong do
@@ -87,30 +67,23 @@ min_phrase_weight: 100
 啊里	a li
 啊裏析	a li sak
 啊里析	a li sak
-該隻	gai cak
+該隻	gai zak
 該析	gai sak
 裏析	li sak
 里析	li sak
-裏隻	li cak
-該	goi
-應該	jing goi
+裏隻	li zak
+應該	ing goi
 涯想到	ngai siong do
 涯想著	ngai siong do
-早	co
-晝	ciu
-晝	ciu
-當晝	dong ciu
-下晝	ha ciu
-暗	am
-夜	ja
-半夜	ban ja
-做	co
-做麼個	co ma gai
+早	zo
+晝	ziu
+當晝	dong ziu
+下晝	ha ziu
+做	zo
+做麼個	zo ma gai
 合	gak
 合下	gak ha
 成	cang
-會	boi
-一滴	jit dit
 
 # 來源於：薪典 http://www.syndict.com
 # 客語輸入法
