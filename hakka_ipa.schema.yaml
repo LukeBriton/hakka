@@ -1,0 +1,64 @@
+# Rime schema
+# encoding: utf-8
+
+__include: hakka.schema:/
+
+schema:
+  schema_id: hakka_ipa
+  name: Hakka 客語（IPA版）
+  version: "2026.06.21"
+  author:
+    - www.syndict.com
+    - 景修 <928786745@qq.com>
+  description: |
+    碼表源自 薪典綜合口音
+    基於 https://github.com/rime/rime-cantonese/blob/main/jyut6ping3_ipa.schema.yaml 修改而來，
+    參照了 https://github.com/leimaau/old-Cantonese/blob/master/jingwaa_fanwan_ipa.schema.yaml。
+    轉寫參考：
+    - 薪典客語拼音方案 https://syndict.com/hakka/mandarin_to_hakka/letters.htm
+    - 《現代漢語方言大詞典·梅縣方言詞典分卷》
+    - 臺灣客語拼音方案使用手冊 https://language.moe.gov.tw/files/people_files/hakka_pinyin3.pdf
+
+translator:
+  dictionary: hakka
+  prism: hakka_ipa
+  spelling_hints: 8  # 標註拼音的字數，建議橫排顯示時設置爲1
+  preedit_format: 
+    - xform/nj/ȵ/                                     # 事前將 nj 改做 ȵ （即齦–齶鼻音[ɲ̟]）
+    - xform/^| |'/,/                                  # 用 , 代表音節開頭
+    - xform/(,)?ng(?=i)/$1ȵ/                          # 開頭 ng 在 i 前改做 ȵ
+    - xform/ng/ŋ/                                     # 其餘 ng 改做 ŋ
+
+    - xform/(,)(m|n|ŋ)(?=$|,)/$1$2̍$3/                 # 音節輔音
+    - xform/m̍/m̩/                                      # 改變符號位置
+    - xform/n̍/n̩/                                      # 改變符號位置
+
+    - xform/([zcs])(ii)(?!u)/$1ɿ$3/                   # ii 改做 ɿ （即成音節齒齦近音[ɹ̩]）
+    - xform/ao/au/                                    # ao/au 容錯
+    - xlit/oe/ɔɛ/                                     # 改成對應音標
+
+    - xform/([aɔɛ][iu])/$1̯/                           # 標示雙元音
+    - xform/[aiuɛɔ][ptdk]/$&̚/                         # 標示入聲音
+
+    - xform/ɔu/ou/                                    # 開始同位異音處理，o 在 u 前抬升
+    - xform/ɛi/ei/                                    # e 在 i 前抬升
+    - xform/ɛu/eu/                                    # e 在 u 前抬升
+
+    - xform/,ch/t͡ʃʰ/                                  # 標示塞擦音
+    - xform/,zh/t͡ʃ/
+    - xform/,q/t͡ɕʰ/
+    - xform/,j/t͡ɕ/
+    - xform/,([ptck])(?!͡)/$&ʰ/                        # 標示送氣音
+    - xform/c|z/t͡s/
+    - xform/sh/ʃ/                                     # 標示擦音
+    - xform/x/ɕ/
+    - xlit/bdg/ptk/                                   # 改為清音
+
+    - xform/,k(?=i)/c/                                # 見組顎化，但不合流
+    - xform/,kʰ(?=i)/cʰ/
+    - xform/,h(?=i)/ç/
+
+    - xform/v/ʋ/                                      # 姑且以爲近音
+
+    - xform/^,//                                      # 開頭的 , 不要
+    - xform/,/./                                      # 將 , 改成 . 以表示音節劃分
