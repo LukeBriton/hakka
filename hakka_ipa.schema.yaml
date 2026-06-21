@@ -44,19 +44,19 @@ translator:
     - xform/ɛi/ei/                                    # e 在 i 前抬升
     - xform/ɛu/eu/                                    # e 在 u 前抬升
 
-    - xform/,ch/t͡ʃʰ/                                  # 標示塞擦音
-    - xform/,zh/t͡ʃ/
-    - xform/,q/t͡ɕʰ/
-    - xform/,j/t͡ɕ/
+    - xform/,ch/,t͡ʃʰ/                                 # 標示塞擦音
+    - xform/,zh/,t͡ʃ/
+    - xform/,q/,t͡ɕʰ/
+    - xform/,j/,t͡ɕ/
     - xform/,([ptck])(?!͡)/$&ʰ/                        # 標示送氣音
     - xform/c|z/t͡s/
     - xform/sh/ʃ/                                     # 標示擦音
     - xform/x/ɕ/
     - xlit/bdg/ptk/                                   # 改為清音
 
-    - xform/,k(?=i)/c/                                # 見組顎化，但不合流
-    - xform/,kʰ(?=i)/cʰ/
-    - xform/,h(?=i)/ç/
+    - xform/,k(?=i)/,c/                                # 見組顎化，但不合流
+    - xform/,kʰ(?=i)/,cʰ/
+    - xform/,h(?=i)/,ç/
 
     - xform/v/ʋ/                                      # 姑且以爲近音
 
